@@ -12,8 +12,9 @@ import Config
 config :disscuss, DisscussWeb.Endpoint, cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
-config :logger, level: :info
-
+config :logger, level: :info,
+url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com", port: 443],
+force_ssl: [rewrite_on: [:x_forwarded_proto]]
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
