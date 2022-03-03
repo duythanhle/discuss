@@ -15,7 +15,7 @@ defmodule DisscussWeb.Endpoint do
       websocket: true,
       websocket: [timeout: 45_000],
       longpoll: false,
-      check_origin: false
+      check_origin: ["https://stormy-thicket-54185.herokuapp.com"]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
