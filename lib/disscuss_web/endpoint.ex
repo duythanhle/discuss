@@ -13,6 +13,7 @@ defmodule DisscussWeb.Endpoint do
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
   socket "/socket", DisscussWeb.UserSocket,
       websocket: true,
+      websocket: [timeout: 45_000],
       longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
