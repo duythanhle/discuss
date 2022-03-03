@@ -68,5 +68,5 @@ client_id =
     """
 #     # "7edae2006fd8e2cc5301b56094e126dbaf2ae0a2"
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
-  client_id: client_id,
-  client_secret: client_secret
+  client_id: "9730fb5b3c4de0cb8047",
+  client_secret: "1919a745538cc8d69862d6703b29dd95ed19de21"
