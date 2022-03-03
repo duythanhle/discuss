@@ -57,12 +57,12 @@ providers: [
 ]
 
 client_secret =
-  System.get_env("CLIENT_SECRET") ||
+  System.get_env("GITHUB_CLIENT_SECRET") ||
     raise """
     environment variable CLIENT_SECRET is missing.
     """
 client_id =
-  System.get_env("CLIENT_ID") ||
+  System.get_env("GITHUB_CLIENT_ID") ||
     raise """
     environment variable CLIENT_ID is missing.
     """
