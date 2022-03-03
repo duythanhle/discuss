@@ -55,6 +55,15 @@ if config_env() == :prod do
     ],
     secret_key_base: secret_key_base
 
+  client_secret =
+    System.get_env("CLIENT_SECRET") ||
+      raise """
+      environment variable CLIENT_SECRET is missing.
+      """
+      # "7edae2006fd8e2cc5301b56094e126dbaf2ae0a2"
+  config :ueberauth, Ueberauth.Strategy.Github.OAuth,
+    client_id: "d0d2348c3c802bf4e8a5",
+    client_secret: client_secret
   # ## Using releases
   #
   # If you are doing OTP releases, you need to instruct Phoenix

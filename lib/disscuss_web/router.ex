@@ -8,6 +8,7 @@ defmodule DisscussWeb.Router do
     plug :put_root_layout, {DisscussWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug DisscussWeb.Plugs.SetUser
   end
 
   pipeline :api do
@@ -24,6 +25,14 @@ defmodule DisscussWeb.Router do
     # put "/topics/:id", TopicController, :update
     # delete "/topics/:id", TopicController, :delete
     resources "/", TopicController
+  end
+
+  scope "/auth", DisscussWeb do
+    pipe_through :browser
+
+    get "/signout", AuthController, :signout
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
   end
 
   # Other scopes may use custom stacks.

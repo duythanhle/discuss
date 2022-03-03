@@ -4,7 +4,8 @@ defmodule Disscuss.Topic do
 
   schema "topics" do
     field :title, :string
-
+    belongs_to :user, Disscuss.User
+    has_many :comments, Disscuss.Comment
     timestamps()
   end
 
