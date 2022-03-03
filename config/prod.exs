@@ -13,12 +13,13 @@ config :disscuss, DisscussWeb.Endpoint, cache_static_manifest: "priv/static/cach
 
 # Do not print debug messages in production
 config :logger, level: :info,
-# url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com", port: 443],
-http: [
-  port: {:system, "PORT"}],
-  url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com",
-  port: 443
- ],
+url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com", port: 443],
+check_origin: ["//stormy-thicket-54185.herokuapp.com"]
+# http: [
+#   port: {:system, "PORT"}],
+#   url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com",
+#   port: 443
+#  ],
 force_ssl: [rewrite_on: [:x_forwarded_proto]]
 # ## SSL Support
 #
