@@ -14,7 +14,8 @@ defmodule DisscussWeb.Endpoint do
   socket "/socket", DisscussWeb.UserSocket,
       websocket: true,
       websocket: [timeout: 45_000],
-      longpoll: false
+      longpoll: false,
+      check_origin: false
 
   # Serve at "/" the static files from "priv/static" directory.
   #
