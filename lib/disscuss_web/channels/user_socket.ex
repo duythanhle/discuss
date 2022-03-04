@@ -39,7 +39,8 @@ defmodule DisscussWeb.UserSocket do
       {:ok, user_id} ->
         {:ok, assign(socket, :user_id, user_id)}
       {:error, _error} ->
-        {:ok, socket}
+        # {:ok, socket}
+        :error
     end
   end
 
