@@ -12,9 +12,11 @@ defmodule DisscussWeb.Endpoint do
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
   socket "/socket", DisscussWeb.UserSocket,
-      websocket: true,
       websocket: [timeout: 45_000],
-      longpoll: false
+      check_origin: [
+        "https://stormy-thicket-54185.herokuapp.com",
+        "https://www.stormy-thicket-54185.herokuapp.com"
+      ]
       # check_origin: ["https://stormy-thicket-54185.herokuapp.com"]
 
   # Serve at "/" the static files from "priv/static" directory.
