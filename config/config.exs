@@ -56,15 +56,16 @@ providers: [
   github: {Ueberauth.Strategy.Github, [default_scope: "user:email"]}
 ]
 
+# client_id =
+#   System.get_env("GITHUB_CLIENT_ID") ||
+#     raise """
+#     environment variable CLIENT_SECRET is missing.
+#     """
+
 # client_secret =
 #   System.get_env("GITHUB_CLIENT_SECRET") ||
 #     raise """
 #     environment variable CLIENT_SECRET is missing.
-#     """
-# client_id =
-#   System.get_env("GITHUB_CLIENT_ID") ||
-#     raise """
-#     environment variable CLIENT_ID is missing.
 #     """
 #     # "7edae2006fd8e2cc5301b56094e126dbaf2ae0a2"
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
