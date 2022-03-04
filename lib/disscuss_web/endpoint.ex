@@ -10,7 +10,7 @@ defmodule DisscussWeb.Endpoint do
     signing_salt: "YCWis+Cf"
   ]
 
-  # socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
   socket "/socket", DisscussWeb.UserSocket,
       websocket: [timeout: 45_000, connect_info: [session: @session_options]]
 
