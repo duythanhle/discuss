@@ -19,13 +19,13 @@ check_origin: [
   "//stormy-thicket-54185.herokuapp.com",
   "//stormy-thicket-54185.herokuapp*"
 ],
-
+force_ssl: [rewrite_on: [:x_forwarded_proto]]
 # http: [
 #   port: {:system, "PORT"}],
 #   url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com",
 #   port: 443
 #  ],
-force_ssl: [rewrite_on: [:x_forwarded_proto]]
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
