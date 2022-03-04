@@ -19,7 +19,7 @@ url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com", port: 443],
 #   "//stormy-thicket-54185.herokuapp.com",
 #   "//stormy-thicket-54185.herokuapp*"
 # ],
-force_ssl: [rewrite_on: [:x_forwarded_proto]],
+# force_ssl: [rewrite_on: [:x_forwarded_proto]],
 check_origin: false,
 https: [
   url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com",
