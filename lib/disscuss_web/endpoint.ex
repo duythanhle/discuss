@@ -10,16 +10,14 @@ defmodule DisscussWeb.Endpoint do
     signing_salt: "YCWis+Cf"
   ]
 
-  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  # socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
   socket "/socket", DisscussWeb.UserSocket,
       websocket: [timeout: 45_000],
       url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com", port: 443],
       check_origin: [
-        "https://stormy-thicket-54185.herokuapp.com",
-        "https://www.stormy-thicket-54185.herokuapp.com",
-        "//stormy-thicket-54185.herokuapp.com"
+        "//stormy-thicket-54185.herokuapp.com",
+        "//stormy-thicket-54185.herokuapp*"
       ]
-      # check_origin: ["https://stormy-thicket-54185.herokuapp.com"]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
