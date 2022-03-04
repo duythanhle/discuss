@@ -15,7 +15,8 @@ defmodule DisscussWeb.Endpoint do
       websocket: [timeout: 45_000],
       check_origin: [
         "https://stormy-thicket-54185.herokuapp.com",
-        "https://www.stormy-thicket-54185.herokuapp.com"
+        "https://www.stormy-thicket-54185.herokuapp.com",
+        "//stormy-thicket-54185.herokuapp.com"
       ]
       # check_origin: ["https://stormy-thicket-54185.herokuapp.com"]
 
