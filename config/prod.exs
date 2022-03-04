@@ -24,7 +24,7 @@ check_origin: false,
 http: [
   url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com",
   port: 443
- ]
+ ]]
 
 # ## SSL Support
 #
