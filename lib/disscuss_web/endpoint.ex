@@ -13,7 +13,7 @@ defmodule DisscussWeb.Endpoint do
   # socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
   socket "/socket", DisscussWeb.UserSocket,
       websocket: [timeout: 45_000, connect_info: [session: @session_options]],
-      url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com", port: 443],
+      url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com"],
       check_origin: [
         "//stormy-thicket-54185.herokuapp.com",
         "//stormy-thicket-54185.herokuapp*"
