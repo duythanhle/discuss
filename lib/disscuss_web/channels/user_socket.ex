@@ -12,7 +12,7 @@ defmodule DisscussWeb.UserSocket do
   #
   # channel "room:*", DisscussWeb.RoomChannel
   channel "comments:*", DisscussWeb.CommentsChannel
-  # transport :websocket, Phoenix.Transports.WebSocket
+  # transport :websocket, Phoenix.Socket.Transport
   #
   # To create a channel file, use the mix task:
   #
