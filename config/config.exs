@@ -67,7 +67,7 @@ client_secret =
     raise """
     environment variable CLIENT_SECRET is missing.
     """
-#     # "7edae2006fd8e2cc5301b56094e126dbaf2ae0a2"
+
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_id: client_id,
   client_secret: client_secret
