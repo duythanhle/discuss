@@ -12,13 +12,13 @@ import Config
 config :disscuss, DisscussWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "stormy-thicket-54185.herokuapp.com", port: 443],
+  url: [scheme: "https", host: "https://discussing.gigalixirapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   check_origin: [
-    "//stormy-thicket-54185.herokuapp.com",
-    "//stormy-thicket-54185.herokuapp*"
+    "//https://discussing.gigalixirapp.com",
+    "//https://discussing.gigalixirapp*"
   ]
 
 # Do not print debug messages in production
