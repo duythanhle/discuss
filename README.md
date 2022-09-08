@@ -47,3 +47,18 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   heroku config:set SECRET_KEY_BASE=
   git push heroku master
   ```
+  
+## Gigalixir deploy
+  ```
+  brew tap gigalixir/brew && brew install gigalixir
+  gigalixir signup
+  gigalixir login
+  gigalixir create
+  echo "elixir_version=1.12.2" > elixir_buildpack.config
+  echo "erlang_version=24.0.3" >> elixir_buildpack.config
+  echo "node_version=12.18.1" > phoenix_static_buildpack.config
+  git commit -am 'Set up gigalixir buildpacks'
+  gigalixir pg:create --free
+  git push gigalixir
+  gigalixir run mix ecto.migrate
+  ```
