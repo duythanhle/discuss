@@ -58,6 +58,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   echo "erlang_version=24.0.3" >> elixir_buildpack.config
   echo "node_version=12.18.1" > phoenix_static_buildpack.config
   git commit -am 'Set up gigalixir buildpacks'
+  gigalixir config:set CLIENT_ID=<<YOUR-CLIENT-ID>>
+  gigalixir config:set CLIENT_SECRET=<<YOUR-CLIENT-SECRET>>
   gigalixir pg:create --free
   git push gigalixir
   gigalixir run mix ecto.migrate
