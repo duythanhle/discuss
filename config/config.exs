@@ -50,24 +50,3 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
-
-config :ueberauth, Ueberauth,
-providers: [
-  github: {Ueberauth.Strategy.Github, [default_scope: "user:email"]}
-]
-
-client_id =
-  System.get_env("GITHUB_CLIENT_ID") ||
-    raise """
-    environment variable CLIENT_SECRET is missing.
-    """
-
-client_secret =
-  System.get_env("GITHUB_CLIENT_SECRET") ||
-    raise """
-    environment variable CLIENT_SECRET is missing.
-    """
-
-config :ueberauth, Ueberauth.Strategy.Github.OAuth,
-  client_id: client_id,
-  client_secret: client_secret
