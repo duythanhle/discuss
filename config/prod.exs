@@ -12,13 +12,13 @@ import Config
 config :disscuss, DisscussWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json",
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "https://discussing.gigalixirapp.com", port: 443],
+  url: [scheme: "https", host: "discussing.gigalixirapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   check_origin: [
-    "//https://discussing.gigalixirapp.com",
-    "//https://discussing.gigalixirapp*"
+    "//discussing.gigalixirapp.com",
+    "//discussing.gigalixirapp*"
   ]
 
 # Do not print debug messages in production
@@ -61,7 +61,7 @@ config :disscuss, DisscussWeb.Repo,
 # `:keyfile` and `:certfile` expect an absolute path to the key
 # and cert in disk or a relative path inside priv, for example
 # "priv/ssl/server.key". For all supported SSL configuration
-# options, see https://hexdocs.pm/plug/Plug.SSL.html#configure/1
+# options, see hexdocs.pm/plug/Plug.SSL.html#configure/1
 #
 # We also recommend setting `force_ssl` in your endpoint, ensuring
 # no data is ever sent via http, always redirecting to https:
